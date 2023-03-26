@@ -130,7 +130,17 @@ if game==1:
             if a=="A" or a=="E"or a=="I" or a=="O" or a=="U":
                 print("\033[1;35mC'mon its a vowel , if it was in the movie we would have already given , why are you wasting a chance ")
                     
-#IF MOVIE GUESSED CORRECTLY
+   
+            if k==s+5:
+                if i !=("".join(str(ele) for ele in j)):
+                    print("\033[1;33mOH NOOO!!! You ran out of chances , well maybe its just not your day\nBETTER LUCK NEXT TIME :)  ")
+                    print("\033[1;36mWell your final answer was {} which is not correct ".format("".join(str(ele) for ele in j)))
+                    print("\033[1;33mThe correct answer was {} ".format(i))
+                    chances=chances-1
+                    if chances>1:
+                        print("\033[1;36mWell now gear up for the next one now \nbut you are now left with {} lives only ".format(chances))
+                    elif chances==1:
+                        print("\033[1;36mThis is your last life, guess correctly ")
             if i ==("".join(str(ele) for ele in j)):
                 print("\033[1;32mYes the correct movie was {} ".format(i))
                 points=points+10
